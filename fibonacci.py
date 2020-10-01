@@ -41,13 +41,13 @@ if __name__ == '__main__':
         print(fibonacci_iter(n))
 
 # Question 3
-def fibonacci_power(n):
+def fibonacci_power(n, dtype=np.int64):
     if n == 0:
         return 0
 
     def power(A, n):
         if n == 0:
-            return np.eye(2) # multiplicative identity
+            return np.eye(2, dtype=dtype) # multiplicative identity
         if n == 1:
             return A
 
@@ -56,8 +56,8 @@ def fibonacci_power(n):
         else:
             return power(A @ A, n // 2)
 
-    A = np.array([[1,1],[1,0]])
-    b = np.array([1,0])
+    A = np.array([[1,1],[1,0]], dtype=dtype)
+    b = np.array([1,0], dtype=dtype)
 
     An = power(A, n-1)
     x = An @ b

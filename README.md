@@ -126,7 +126,7 @@ We can re-write the Fibonacci recurrence using a matrix-vector product:
 [F_n    ] = [1, 1] * [F_{n-1}]
 [F_{n-1}]   [1, 0]   [F_{n-2}]
 ```
-Let `x_n = [F_n, F_{n-1}]^T` above, and let `A` denote the matrix `[[1,1],[1,0]]` above.  Then we can write `x_n = A^n x_1`, where `x_1 = [1,0]`.
+Let `x_n = [F_n, F_{n-1}]^T` above, and let `A` denote the matrix `[[1,1],[1,0]]` above.  Then we can write `x_n = A^(n-1) x_1`, where `x_1 = [1,0]`.
 
 Write a Python function `fibonacci_power` that computes `F_n` using the above relation, using numpy for vectors and matrices.  Use a modified version of your adaptation of the Egyptian algorithm in part 1 to compute the power `A^n`.
 
@@ -134,7 +134,7 @@ Print the first 30 Fibonacci numbers using this function.  Compare to your answe
 
 What is the asymptotic number of operations done in this algorithm?  Addition and multiplication both count as single operations (there are special circuits on a CPU to do either in one clock cycle). How does this compare to the algorithms in problem 2?
 
-What are potential issues you might run into with large values of `n` in this algorithm?  (You don't need to address them in code.)
+What are potential issues you might run into with large values of `n` in this algorithm?  (You don't need to address them in code.)  Do you think it would be better to use `np.float64` or `np.int64` in your arrays for large values of `n`?  You can specify the data type of an array using the keyword `dtype`, for example `x = np.array([1,2,3], dtype=np.float64)`.
 
 ## Problem 4 - PyPlot Basics (15 points)
 

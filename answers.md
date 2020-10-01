@@ -22,7 +22,7 @@ Asymptotic number of operations is O(log2(n)) - which we can see from the answer
 
 This is faster than either solution to problem 2.
 
-There are potential numerical issues with floating point error or integer overflow (depending on what data type is used in the matrices).  There doesn't need to be any analysis of this.
+There are potential numerical issues with floating point error or integer overflow (depending on what data type is used in the matrices).  `np.int64` will delay this issue because it has more significant bits.
 
 ## Problem 4
 
