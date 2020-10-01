@@ -13,15 +13,15 @@ class TestFibonacci(unittest.TestCase):
 
 	def test_recursive(self):
 		for n, ans in enumerate(fibs):
-			self.assertEqual(fibonacci_recursive, ans)
+			self.assertEqual(fibonacci_recursive(n), ans)
 
 	def test_iter(self):
 		for n, ans in enumerate(fibs):
-			self.assertEqual(fibonacci_power, ans)
+			self.assertEqual(fibonacci_iter(n), ans)
 
 	def test_power(self):
 		for n, ans in enumerate(fibs):
-			self.assertEqual(fibonacci_power, ans)
+			self.assertEqual(fibonacci_power(n), ans)
 
 
 class TestEgyptian(unittest.TestCase):
