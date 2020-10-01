@@ -4,7 +4,11 @@ In this homework, you'll practice some basic tools you'll use throughout the cou
 
 Please put any written answers in [`answers.md`](answers.md)
 
-You may need to use conda to install `tqdm` to run the starter code for problem 4.
+You may need to use conda to install `tqdm` to run the starter code for problem 4.  You can run
+```
+conda install --file requirements.txt
+```
+to install the packages in [`requirements.txt`](requirements.txt)
 
 ## Grading Rubric
 
